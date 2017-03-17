@@ -1,12 +1,15 @@
  <!DOCTYPE=html>
  <html>
  <head>
-    <title>{% block title %}{{ title|default:'Título' }}{% endblock %}</title>
+    <title>{% block title %}{{ title|default('Título') }}{% endblock %}</title>
     <style>
         body {
             background-color: #123456;
             color: white;
             font-family: monospace;
+        }
+        a:visited {
+            color: #eee;
         }
     </style>
  </head>

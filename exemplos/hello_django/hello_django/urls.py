@@ -18,10 +18,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from hello_django.views import test_view
-from trees.views import tree_view
+from trees.views import tree_view, tree_list
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^trees/(?P<tree_id>[0-9]+)/$', tree_view)
+    url(r'^trees/$', tree_list),
+    url(r'^trees/(?P<tree_id>[0-9]+)/$', tree_view),
 ]

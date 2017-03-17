@@ -1,0 +1,16 @@
+{% extends "trees/base.html" %}
+
+{% block title %}Lista de árvores{% endblock %}
+
+{% macro tree_link(tree) %}
+    <a href="{{ tree.id }}/">{{ tree.species }}</a>
+{% endmacro %}
+
+{% block body %}
+<ul>
+    {% for tree in tree_list %}
+        <li>{{ tree_link(tree) }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
