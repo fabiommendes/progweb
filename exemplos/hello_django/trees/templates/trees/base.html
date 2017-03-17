@@ -1,0 +1,19 @@
+ <!DOCTYPE=html>
+ <html>
+ <head>
+    <title>{% block title %}{{ title|default:'Título' }}{% endblock %}</title>
+    <style>
+        body {
+            background-color: #123456;
+            color: white;
+            font-family: monospace;
+        }
+    </style>
+ </head>
+ 
+ <body>
+ {% block body %}
+ 
+ {% endblock %}
+ </body>
+ </html>

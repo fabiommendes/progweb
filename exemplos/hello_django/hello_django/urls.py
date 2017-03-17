@@ -17,14 +17,11 @@ Including another URLconf
 
 from django.conf.urls import url
 from django.contrib import admin
-from django.http import HttpResponse
-import random
+from hello_django.views import test_view
+from trees.views import tree_view
 
-def teste(resquest, n):
-    return HttpResponse('<h1 style="color: purple">hello world, %s!</h1>' % n)
-    
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^teste/([0-9]+)/$', teste),
+    url(r'^trees/(?P<tree_id>[0-9]+)/$', tree_view)
 ]
