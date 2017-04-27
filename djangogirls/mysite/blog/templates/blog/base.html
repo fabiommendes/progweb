@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<html>
+    <head>
+    <style>
+        .page-header{
+            background-color:#FF9400;
+            margin-top:0;
+            padding: 20px 20px 20px 40px;
+        }
+    
+    </style>  
+        <title>Django Girls Blog</title>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

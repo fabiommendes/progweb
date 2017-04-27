@@ -1,0 +1,11 @@
+@import url(normalize.css);
+.contact {
+  font-size: 2em;
+  padding: 20px;
+  border: 10px solid green;
+  margin: 60px;
+  background: magenta; }
+  .contact .contact__img {
+    background: #ff33ff; }
+
+/*# sourceMappingURL=page.css.map */

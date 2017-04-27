@@ -1,0 +1,4 @@
+{
+  "myenv/lib/python3.6/site-packages/django/contrib/admindocs/tests/test_fields.py": true,
+  "myenv/lib64/python3.6/site-packages/django/contrib/admindocs/tests/test_fields.py": true
+}
