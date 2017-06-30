@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block body %}
+    <ul>
+        {% for class_ in class_rooms %}
+            <li><strong>Turma:</strong> {{ class_.class_letter }} - <strong>Nome:</strong> </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -11,7 +11,7 @@ Descrição
 ---------
 
 O trabalho consiste em fazer o empacotamento para implantação do sistema 
-desenvolvido no EP1/EP2. Faremos um container Docker e a integração com um 
+desenvolvido no EP1/EP2/EP3. Faremos um container Docker e a integração com um 
 serviço de integração contínua.
 
 O tutorial será avaliado de acordo com os critérios:
@@ -22,7 +22,7 @@ O tutorial será avaliado de acordo com os critérios:
             Docker.
 * 0,1 pts - Criação e articulação de containers para implantação utilizando o 
             Docker compose.
-* 0,1 pts - Container de demonstração registrado no Docker compose.
+* 0,1 pts - Container de demonstração registrado no Docker hub.
 * 0,1 pts - Boas práticas + otimização das imagens criadas
  
 

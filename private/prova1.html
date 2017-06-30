@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Made with Remarkable!
+  </title>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <style type="text/css">
+   body,table tr{background-color:#fff}table tr td,table tr th{border:1px solid #ccc;text-align:left;padding:6px 13px;margin:0}pre code,table,table tr{padding:0}hr,pre code{background:0 0}body{font:16px Helvetica,Arial,sans-serif;line-height:1.4;color:#333;word-wrap:break-word;padding:10px 15px}strong,table tr th{font-weight:700}h1{font-size:2em;margin:.67em 0;text-align:center}h2{font-size:1.75em}h3{font-size:1.5em}h4{font-size:1.25em}h1,h2,h3,h4,h5,h6{font-weight:700;position:relative;margin-top:15px;margin-bottom:15px;line-height:1.1}h1,h2{border-bottom:1px solid #eee}hr{height:0;margin:15px 0;overflow:hidden;border:0;border-bottom:1px solid #ddd}a{color:#4183C4}a.absent{color:#c00}ol,ul{padding-left:15px;margin-left:5px}ol{list-style-type:lower-roman}table tr{border-top:1px solid #ccc;margin:0}table tr:nth-child(2n){background-color:#aaa}table tr td :first-child,table tr th :first-child{margin-top:0}table tr td:last-child,table tr th :last-child{margin-bottom:0}img{max-width:100%}blockquote{padding:0 15px;border-left:4px solid #ccc}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px}pre code{margin:0;white-space:pre;border:none}.highlight pre,pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}
+  </style>
+ </head>
+ <body>
+  <h1>
+   Prova 1 - Programação Web
+  </h1>
+  <h2>
+   Questão 1
+  </h2>
+  <p>
+   Um dos principais elementos do Django é o seu ORM (Object Relational Mapper) que abstrai o banco de dados e expõe as linhas de uma tabela no banco como um objeto Python. Os modelos abaixo implementam uma aplicação simples do tipo "Twitter"
+  </p>
+  <pre><code class="python">from django.db import models
+
+class User(models.Model):
+    name = models.CharField(max_size=50)
+    email = models.EmailField()
+
+class Tweet(models.Model):
+    user = models.ForeignKey(User, related_name='tweets')
+    text = models.TextField()
+    created = models.DateTimeField()
+</code></pre>
+  <p>
+   Responda:
+  </p>
+  <ol>
+   <li>
+    Faça um esboço de como seriam as tabelas criadas no banco de dados para os dois modelos acima. Coloque alguns exemplos de usuários e tweets.
+   </li>
+   <li>
+    O que significa o campo ForeignKey() utilizado no objeto Tweet? Discuta as vantagens/desvantagens em se utilizar uma chave estrangeira em comparação a uma referência manual ao índice de User utilizando IntegerField, por exemplo.
+   </li>
+  </ol>
+  <h2>
+   Questão 2
+  </h2>
+  <p>
+   Responda as questões a respeito de busca em banco de dados:
+  </p>
+  <ol>
+   <li>
+    O que são os
+    <code>
+     QuerySets
+    </code>
+    no Django?
+   </li>
+   <li>
+    Como seria a busca de todos os tweets produzidos por um determinado usuário? (Assuma que o usuário em questão é conhecido e salvo na variável
+    <code>
+     user
+    </code>
+    .)
+   </li>
+   <li>
+    Como seria uma busca por todos os tweets de um determinado usuário a partir de uma determinada data? Explique a notação utilizada para fazer isto no Django. (Assuma que tanto o usuário quanto a data já estão disponíveis nas variáveis
+    <code>
+     user
+    </code>
+    e
+    <code>
+     datetime
+    </code>
+    .)
+   </li>
+  </ol>
+  <h2>
+   Questão 3
+  </h2>
+  <p>
+   Acesso ao banco de dados é um dos principais fatores que influenciam na performance de uma aplicação Web. Suponha que queremos extrair os nomes dos autores e textos dos tweets para cada tweet do banco. As duas buscas abaixo realizam esta operação, mas possuem características de performance diferentes. Discuta qual é a mais eficiente e porquê.
+  </p>
+  <pre><code class="python"># Query 1
+L = [(tweet.user.name, tweet.text) for tweet in Tweet.objects.all()]
+
+# Query 2
+L = list(Tweet.objects.values_list('user__name', 'text'))
+</code></pre>
+  <h2>
+   Questão 4
+  </h2>
+  <p>
+   Explique o que são as "views" do Django e como elas se relacionam com as URLs de sua aplicação. Esboce uma view típica que extrai um objeto do banco de dados e renderize uma página correspondente em HTML.
+  </p>
+  <h2>
+   Questão 5
+  </h2>
+  <p>
+   Uma requisição HTTP é formada por uma linha de verbo + url, cabeçalhos e corpo da mensagem. Explique a distinção entre os verbos GET e POST e descreva algumas situações onde é preferível utilizar um ao outro.
+  </p>
+  <h2>
+   Questão 6
+  </h2>
+  <p>
+   Defina e explique sucintamente o que são cada uma das tecnologias abaixo e como elas são utilizadas no desenvolvimento de uma aplicação Web.
+  </p>
+  <ol>
+   <li>
+    HTML
+   </li>
+   <li>
+    CSS
+   </li>
+   <li>
+    JavaScript
+   </li>
+   <li>
+    HTTP e HTTPS
+   </li>
+   <li>
+    SQL
+   </li>
+  </ol>
+  <h2>
+   Questão 7
+  </h2>
+  <p>
+   O que são testes unitários? Descreva os principais desafios de escrever testes unitários para aplicações Web.
+  </p>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   MathJax.Hub.Config({"showProcessingMessages" : false,"messageStyle" : "none","tex2jax": { inlineMath: [ [ "$", "$" ] ] }});
+  </script>
+ </body>
+</html>
