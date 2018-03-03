@@ -109,7 +109,7 @@ O aluno que participar como *coach* do Django-Girls ganha o direito de converter
 Cronograma de atividades
 ------------------------
 
-+========+========+============================================================+ 
++--------+--------+------------------------------------------------------------+
 | Semana | Data   | Aula                                                       |
 +========+========+============================================================+ 
 |   1    | 06/03  | Início das aulas – Apresentação do curso e tecnologias Web |
