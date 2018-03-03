@@ -1,8 +1,0 @@
-{% extends 'base.html' %}
-{% block body %}
-    <ul>
-        {% for discipline in disciplines_list %}
-            <li><a href="{% url 'pessoas:detail' discipline.code  %}"> Codigo: {{ discipline.code }} - Nome: {{ discipline.name }}</li>
-        {% endfor %}
-    </ul>
-{% endblock %}
