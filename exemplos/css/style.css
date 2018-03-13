@@ -1,0 +1,14 @@
+/*
+ 
+Links: 
+  - https://css-tricks.com/specifics-on-css-specificity/
+  - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ 
+ */
+
+.remember-me {
+    background: #2F9CCB;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Josefin Slab', serif;
+    font-family: 'Open Sans', sans-serif;
+}

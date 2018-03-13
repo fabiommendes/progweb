@@ -154,7 +154,6 @@ Cronograma de atividades
 |        |       | * Seletores                                                |
 |        |       | * Cascata e prioridades de seletores                       |
 |        |       | * Sass e pré-compiladores CSS                              |
-|        |       | * Inverse triangle e metodologias CSS                      |
 +--------+-------+------------------------------------------------------------+
 |        | 15/03 | Design responsivo                                          |
 |        |       |                                                            |
