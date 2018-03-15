@@ -1,0 +1,56 @@
+/*
+ 
+Links: 
+  - https://css-tricks.com/specifics-on-css-specificity/
+  - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ 
+ */
+
+// Cor de fundo
+$background-color: rgb(52, 203, 47);
+
+.navbar {
+    background: $background-color;
+    color: white;
+    
+    ul, li {
+        list-style: none;
+        display: inline;
+    }
+    
+    .link.foo {
+        text-decoration: underline;
+        background: cyan;
+    }
+    
+    a {
+        text-decoration: none;
+        background: magenta !important;
+    }
+
+    
+    
+    .logo {
+        font-size: 2em;
+        font-family: 'Josefin Slab';
+    }
+}
+
+.hero {
+    background: $background-color;
+    text-align: center;
+    
+    h1 {
+        font-family: 'Pacifico', cursive;
+    }
+}
+    
+
+
+
+.remember-me {
+    background: #2F9CCB;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Josefin Slab', serif;
+    font-family: 'Open Sans', sans-serif;
+}

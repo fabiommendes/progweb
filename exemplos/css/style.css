@@ -5,10 +5,32 @@ Links:
   - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
  
  */
+.navbar {
+  background: #34cb2f;
+  color: white; }
+  .navbar ul, .navbar li {
+    list-style: none;
+    display: inline; }
+  .navbar .link.foo {
+    text-decoration: underline;
+    background: cyan; }
+  .navbar a {
+    text-decoration: none;
+    background: magenta !important; }
+  .navbar .logo {
+    font-size: 2em;
+    font-family: 'Josefin Slab'; }
+
+.hero {
+  background: #34cb2f;
+  text-align: center; }
+  .hero h1 {
+    font-family: 'Pacifico', cursive; }
 
 .remember-me {
-    background: #2F9CCB;
-    font-family: 'Pacifico', cursive;
-    font-family: 'Josefin Slab', serif;
-    font-family: 'Open Sans', sans-serif;
-}
+  background: #2F9CCB;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Josefin Slab', serif;
+  font-family: 'Open Sans', sans-serif; }
+
+/*# sourceMappingURL=style.css.map */
