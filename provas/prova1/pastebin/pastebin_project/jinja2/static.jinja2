@@ -1,0 +1,20 @@
+{% extends 'base.jinja2' %}
+
+{% block header %}
+  <header>
+    <h1 class="paste-header">Questão {{ number }}</h1>
+  </header>
+{% endblock %}
+
+{% block main %}
+  <main class="paste-form">
+    <h2>{{ title }}</h2>
+    <pre><code>{{text}}</code></pre>
+
+    <p>Dica: Salve um paste com o título {{ paste_title }} no banco da sua 
+    aplicação. Esta é a resposta! (não coloque o banco no gitignore)</p>
+
+    <h2>Solução: {{ paste_title }}</h2>
+    <pre><code>{{ paste_data }}</code></pre>
+  </main>
+{% endblock %}

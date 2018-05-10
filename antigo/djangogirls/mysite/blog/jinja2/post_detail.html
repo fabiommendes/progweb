@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>
+    {{ my_dict['foo'] }}
+    {{ foo.answer() }}
+    {{ foo.ham }}
+    {{ the_answer() }}
+    {{ "hello"|UPPER }}
+    {{ 40 | plus(2) }}
+</h1>
+
+<div>
+    <p>published: {{ post.published_date }}</p>
+    <h2><a href="{# url('post_detail', pk=post.pk) #}">{{post.title}}</a></h2>
+    <p>{{ post.text }}</p>
+</div>
+{% endblock content %}

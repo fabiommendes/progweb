@@ -1,0 +1,21 @@
+{% extends 'base.jinja2' %}
+
+{% block header %}
+  <header>
+    <h1 class="paste-header">Lista de pastes ({{ language }})</h1>
+  </header>
+{% endblock %}
+
+{% block main %}
+  <main class="paste-languages">
+    <h2>Lista de pastes</h2>
+    <ul>
+      {% for paste in pastes %}
+        <li><a href="{{ url('paste-detail', args=(paste.id,)) }}">{{ paste.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <h2>Questão 6</h2>
+    <p>O template está pronto! Corrija a view e as models!</p>
+    <p>Deve mostrar todos os pastes da mesma linguagem</p>
+  </main>
+{% endblock %}

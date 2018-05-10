@@ -1,0 +1,36 @@
+<html>
+    <head>
+    {% block styles %}
+    <style>
+        .page-header{
+            background-color:#FF9400;
+            margin-top:0;
+            padding: 20px 20px 20px 40px;
+        }
+    </style>
+    {% endblock %}
+    
+    {% block scripts %}
+    {% endblock %}
+
+    <title>{% block title -%}
+        {%- if title -%}
+            {{ title }}
+        {%- else -%}
+            Django Girls Blog
+        {%- endif -%}
+        {%- endblock -%}
+    </title>
+    </head>
+    <body>
+        {% block body %}
+        <div class="page-header">
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        {% endblock %}
+    </body>
+</html>

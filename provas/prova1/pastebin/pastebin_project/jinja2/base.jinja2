@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="pt_BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% block title %}{{ title|default('Pastebin') }}{% endblock %}</title>
+  <meta name="description" content="Pastebin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/unpoly@0.55.1/dist/unpoly.min.css">
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  {% block header %}
+  <header>
+    <h1>Hello world! Please override the header block in your Jinja2 template!</p>
+  </header>
+  {% endblock %}
+  
+  {% block breadcrumbs %}
+    <div class="bredcrumbs">
+      <a href="/python/">Python</a>
+      <a href="/js/">Javascript</a>
+      <a href="/outros/">Outros</a>
+    </div>
+  {% endblock%}
+
+  {% block main %}
+  <main>
+    <p>Hello world! Please override the content block in your Jinja2 template!</p>
+  </main>
+  {% endblock %}
+
+  {% block footer %}
+  <footer>
+    <p>Footer que deve aparecer apenas no modo desktop!</p>
+  </footer>
+  {% endblock %}
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous" defer></script>
+  <script src="https://unpkg.com/unpoly@0.55.1/dist/unpoly.min.js" integrity="sha384-FUV9cfVk8Zhr5OaWPR/JcLdI4l+rrnthYZR8SsN1kgz8gz6nLNgobP/0FsfHD0ex" crossorigin="anonymous"></script>
+  <script src="/static/js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.jinja2' %}
+
+{% block header %}
+  <header>
+    <h1 class="paste-header">{{ title }}</h1>
+  </header>
+{% endblock %}
+
+{% block main %}
+  <main class="paste-form">
+    <h2>Questao 1</h2>
+    <p>Deve mostrar um formulário em que o usuário pode criar um novo 
+    paste.</p>
+    <p>Cada paste deve conter um título, uma linguagem e o conteúdo.</p>
+    <p>Linguagens reconhecidas: Python, Javascript e Outros</p>
+    <p>Existem questões ocultas! Procure no código</p>
+  </main>
+{% endblock %}
